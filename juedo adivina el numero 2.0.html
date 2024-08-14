@@ -1,0 +1,47 @@
+<meta charset = "utf-8">
+<h1>Adivine el Numero</h1>
+
+<script>
+	function saltarlinea(){
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+	}
+    function imprimir(frase){
+	document.write(frase);
+	saltarlinea();
+}
+
+alert("Adivine el numero, tiene 5 intentos");
+
+    var numeropensado = Math.round(Math.random()*10);
+    var intentos = 5;
+    var contadorIntentos = 1;
+
+while (contadorIntentos <= intentos) {
+
+	var numerolanzado = parseInt(prompt("ingrese un numero entre 0-10"));
+
+    if (numeropensado == numerolanzado){
+	alert("Usted acerto, en el intento" + contadorIntentos + "el numero pensado era" + numeropensado);
+	break;// es para que corte el loop while si sucede esto en el programa. 
+} 
+
+else {
+	alert("Usted erró");
+}
+
+    contadorIntentos++;
+}
+
+    if (numeropensado == numerolanzado){
+	imprimir("Usted acerto, muy bien!! de refrescar la pagina para volver a jugar ");
+} 
+
+else {
+	imprimir("Usted erró, el numero pensado era:" + numeropensado + " de refrescar para volver a jugar");
+}
+	
+
+
+</script>
